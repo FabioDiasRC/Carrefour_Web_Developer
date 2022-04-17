@@ -1,0 +1,17 @@
+assincronissidade
+nao ocorre ao mesmo tempo, por padrao o javascript e sincrona
+no assincrono pode-se efetuar dois processos ao mesmo tempo
+--promises objeto de processamento assincrono, de valor inicial desconhecido, entao ou ela e resolvida ou descartada
+3 estados -> pending - pendente (quando começa) / fulfield - completada / rejected - rejeitada
+const myPromise = new Promise (resolve, reject)
+pode-se encadear a chamada com '.then', que sera executado caso seja bem sucedida a 'promise', ou usar o 'catch(err)' para mostrar a mensagem do erro
+
+assync e await
+--async - define uma função assincrona
+--await criada para lidar com promisses, para so depois que uma promisse necessaria for resolvida (o codigo precisa ser parado para funcionar corretamente) e continuar a passar pelas etapas
+o resultado de uma promise e outra promise, entao o await tambem e usada para receber resultados de promises
+pode se usar o try catch para trabalhar os resultados
+
+API's - Aplication Programming interface, intermedia o resultado do beckend com o front end
+--JSON - javascrip Object Notation - normalmente a api retorna um JSON
+--Fetch - consumo de API, 'fetch(url, options)', retorna uma promise, sempre converter a resposta para um json (sempre usar await quando for usar o fetch)

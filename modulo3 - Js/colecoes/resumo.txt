@@ -1,0 +1,9 @@
+maps e objetos
+maps sao chave de qualquer tipo, o objeto e sempre de string
+maps possui lenght, no objeto voce tem que passar por todas as propriedades
+maps sao mais faceis de interar e seus valores devem ser do mesmo tipo, no objeto nao precisa ser do mesmo tipo
+
+coleção chaveada - set
+set sao estruturas que armazenam valores unicos, nao se repetem nunca
+metodos - add/has(consultar)/delete - consulta o tamanho pela propriedade size, ao inves de length
+array e muito mais flexivel, n possui o metodo map, filter, reduce, etc

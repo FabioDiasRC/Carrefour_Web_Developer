@@ -1,0 +1,15 @@
+paradigmas
+--programas sao objetos com varias propriedades
+4 pilares
+-- Abstração: processo mental para isolar um aspecto e abstrair os problemas para problemas cada vez mais simples
+-- Herança: objetos filhos herdam propriedades e metodos dos objetos pai
+-- Encapsulamento: cada classe tem propriedades e metodos independente do codigo
+-- Polimorfismo: ligado a abastração, ex: pode herdar uma classe do pai pela herança, mas se comportam de uma forma similar, mas diferente quando invocado
+
+oojs - objetos orientados em javaScript
+-- prototipos: reponsavel pelo conceito de herança esqueletos de um objeto, Obejct.proptotype é o topo dessa cadeia. cadeia de prototipos é uma sequencia de busca pelas funções de cada um dos obejtos pai, com base no que foi invocado
+--Classes - syntax sugar, para facilitar a escrita. Todas as classes sao objetos e a hereança vem dos prototipos
+    -contructor: construi classe e pode atribuir parametros a valores nessa classe, mantendo um valor default caso nao seja passado nada;
+    -getter e setter: acessar os parametros e propriedades, get retorna algo e o set é determinar a troca do valor de parametro
+    -super(): manda para cima, função pai, os parametros que estao sendo passados
+    -metodo: pode-se sobrescrever, mudar comportamentos

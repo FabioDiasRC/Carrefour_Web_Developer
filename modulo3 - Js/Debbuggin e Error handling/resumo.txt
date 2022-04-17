@@ -1,0 +1,17 @@
+tipos de erros
+--objeto ERROR do Ecmascript
+tempo de execução, mensagem, nome, linha e call stack
+--Dowm exception - erros relacionados ao DOM(document Obeject Model)
+
+Throw e return
+--return ele retorna uma string, se tiver algo entre 'aspas'
+--throw - tratamento de erros, se tiver o throw para algo entre aspas ele vai considerar como um erro, tendo todas as propriedades de um erro
+
+try...Catch
+declaração onde no bloco try se verifica o pedaço de codigo tem um erro, caso tenha o erro sera manipulado dentro do Catch
+--finally instrução chamada independete de ter o erro ou nao, sera sempre executado
+
+objeto 'error' - criar erro personalizado, aceita propriedades e metodos (menssage, filename,lineNumber)
+--simplificando a utilização
+const meuErro = new Error('mensagem invalida')
+throw meuErro;

@@ -1,0 +1,16 @@
+DOM - Document Object Model, como acessar e modificarf os elementos html de uma pagina
+BOM - Browser Object Model
+utilizaros metodos e as tags, ids e classes para trabalhar na estrutura html
+queryselector alll retorna um array, pode ser por classe ou por tags
+document.createElmente(element) - novo elemento html
+document.removechild - remove um elemento
+document.appendchild - adiciona um elemento
+document.replaceChild - substitui um elemento
+
+estilos
+classes - element.classlist
+document.getElementbytagname('p').style.cor = 'blue' exemplo de acesso direto
+
+eventos de mouse - mouseover (hover), mouseOut(sair do elemento)
+click e click duplo (dbclick)
+change e load

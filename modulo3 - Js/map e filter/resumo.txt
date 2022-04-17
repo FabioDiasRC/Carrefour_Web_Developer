@@ -1,0 +1,17 @@
+--Array : Lista de dados
+
+metodo Map - um conjunto passa por uma operação, no caso o map, e se trnaformar em outro conjunto, criando um novo array, nao modificando o original
+realiza as operações em ordem, do index 0 ao ultimo
+sintaxe array.map - recebe ou o callbakc, uma função que sera executada em cada elemento (acesso ao item, index e ao array original) e o optativo é o thisArg, apenas se sua operação varia de acordo com o objeto
+
+For Each - sintax identica, mas o retorno resultarua em undefined, necessario colocar a operação dentro de uma constante para usar o valor de array retornado
+
+Filter
+-- Filter, todo array dentro de um filtro e apenas os itens que passarem por determinada condição criam como resposta um novo array original. sintax parecida com o do map, mesmo parametros (no exemplo foi usado o metodo 'includes', para pegar tudo que incluia a maça dentro de frutas, mostrando tambem que o filter pode usar os metodos referentes ao tipo de dado que temos, no caso eram strings)
+
+
+Reduce
+ele nao retorna um outro array, ele executa uma função em todos os elementos de um array e retorna apenas um valor, podendo ser uma array, string, numero, executa
+array.reduce(callback('acumulador' - prev, 'currentvalue' elemento atual, 'index' do valor atual, 'array' original), initialValue)
+callback e a função executada a partir do acumulador
+initialValue valor sobre o qual o retorno final ira atuar
