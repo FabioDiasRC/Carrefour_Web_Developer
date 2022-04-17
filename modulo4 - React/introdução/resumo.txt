@@ -1,0 +1,7 @@
+historia e conceito
+react é uma biblioteca javascript para criar interfaces de usuario, 2011 por jordan walke do facebook
+2012 utilizado no instagram
+2013 open spurce
+2015 react native
+2015 uwp (universal windows platform)
+
