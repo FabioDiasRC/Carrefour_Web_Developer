@@ -5,3 +5,43 @@ react é uma biblioteca javascript para criar interfaces de usuario, 2011 por jo
 2015 react native
 2015 uwp (universal windows platform)
 
+renderização
+react DOM - dom virtual, nós raiz;
+componentes basicos sao unicos, trabalham como função e classes
+Props serao os parametros
+
+importante
+para componentes dentro de compornentes, como em :
+<Componente A>
+  <Componente B>
+  </Componente B>
+</Componente A>
+é importante passar o children como props, caso contrario o react nao renderiza
+
+
+estado e ciclo de vida
+'https://reactjs.org/docs/state-and-lifecycle.html' documentação
+4 estados
+- inicialização (props and state)
+- montagem (componentWillMount/render/componentDidMount)
+- Atualização (props-receive props. upadte/state update)
+- Desmontagem (componenteWillUnmount)
+obs toda vez que uma props é alteradae ele é atualizado, isso pode gerar gargalo de perfomance
+o state é apenas local ao componente, mandando informação apenas via props
+
+Webpack - instalado em 'react instalado'
+module bundler - empacotador de modulos para aplicação js, empacota no final do projeto tudo em um arquivo so, indicado pra grande apliacações, feito para javascript
+entry - utilizando grafo, ponto de entrada, arquivo principal onde se mapea todos os outros modulos, configurado manualmente
+output - bundlers para onde sera o arquivo final, uma ou mais arquivos
+loaders - pode se ler arquivos nao js
+plugins - podem ser utilizados para otimização de pacotes
+mode - como podem ser passada algumas configurações (production (arquivo final para produção ja), development(3 puglins - amplify, modele concatenation, no emetion errors, plugins mais basicos e faceis de debugar) - default ou none (nenhuma configuração))
+
+Renderização Condicional
+Criar componentes distintos que encapsulam o comportamento que voce precisa, podendo renderizar apenas algunas elementos dependendo do estado da aplicação
+
+manipular evento
+usar camelCase e em jsx voce passa a função manipuladora ao inves de um texto
+
+prensando react
+mock - hierarquia de componentes - separar em diferentes files para ficar manutenivel
