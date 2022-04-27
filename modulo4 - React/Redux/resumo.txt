@@ -1,0 +1,76 @@
+state container - bloco da sua aplicação que armazena um estado de forma centralizada, que pode ser lida por outros blocos da aplicaçao
+-previsivel
+-centralizado
+-debugavel
+-flexivel
+inspirado no flux e elm
+sobre elm (imutabilidade, API declarativa, operações deterministicas, controlar os sides effects)
+
+A influencia da arquitetura flux
+unidirecional, simplificando os efeitos do react flux, sendo liberado o 'open source' juntamente com o react
+
+Principios
+ - uma unica fonte de verdade
+ - so uma via de informação
+ - mudado apenas por uma função pura
+API 
+store.getState() - acessar o reducer
+createStore() - cria a store
+store.dispatch() - 
+react se basea e utiliza connect para interação do estado
+
+Middlewares
+third party extension point between dispatching an action, and the moment it reaches the reducer
+
+visao geral
+utilizar o conect para conectar com o react, em qualquer lugar da aplicaçao
+
+redux toolkit
+npm insttal @reduxjs/toolkit
+configureStore(redux-thunk(Middleware)+reduxDevToolsExtension)
+createReducer - abstração de forma mais simples,  reducer com o builder (immer.js)
+createAction
+createSlice ( reducers + actions)
+createScelect
+
+Alternativas ao redux
+contextApi - react
+recoil - fb
+mobx - redux-saga - Middleware,rxjs
+XState
+- pros ( simplifica problemas de data flow/ponto unicos de controle estado)
+- contras ( complica porblemas de data flow que sao mais simples)
+conclusao
+-super podeoros, mas pode ser custoso
+-super extensivel, mas precisa de clareza
+-state containers nao sao triviais de usar e nao resolvem prblemas triviais
+-flexivel para resolver problemas
+-porposito do redux e diferente do react e pode ser usado em outras situações
+
+--Gerando a store Redux
+
+developer experience
+time traveling - gerenciamento de store e estado
+
+melhores praticas
+redux style guide
+do not mutate state
+reducers must not have side effects / previsbilidade so de ler o codigo, nem reducers vendo outro reducers, etc
+do not put non-serializeble valuers ins state or actions
+only one redux store per app
+
+Ducks pattern e high order reducers
+ducks - pensar o redux como modulos
+ - must export default a function called reducer()
+ - must export its action creators as functions
+ - must have action types in the form npm-module-or-app/reducer/action_type
+ - may export actions types as action
+Higher order reducers
+ - harder functions - funções de alta ordem, executa um encapsulamento da chamada e a logica
+
+componente container
+para poder interagir com as arvores, encapsulando a forma de logica e a regra
+
+hooks everywhere
+atualizado alguns hooks para facilitar a utilização do react redux, convenção
+como voce utiliza as informações vias funções pode se utilizar as funções para trabalhar com os compoenetes e com a logica

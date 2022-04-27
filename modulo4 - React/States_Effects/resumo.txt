@@ -1,0 +1,10 @@
+curso focado na parte comportamental
+
+hooks
+gancho - 'puxa' o componente
+servem para facilitar e agilizar a criação e aplicação do
+
+organizando o projeto
+apos criar o projeto criar uma pasta 'components', onde cada componente tera uma pasta
+
+criar componente sem estado

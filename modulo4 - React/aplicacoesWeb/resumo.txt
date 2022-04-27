@@ -1,0 +1,83 @@
+Aplicando Css
+inline - faz uma 'const divStyle = {color :'blue} etc', que aceita um objeto com elementos do CSS, depois aplica no componente desejado '< Componente style={divStyle}>'
+inline Pro - mais pratica e direta/ajustes rapidos/ testes de estilo
+inline Contras - dificil manutenção
+
+classes - utilizar className no componente e usar a classname no arquivo Css
+Css in js pro - manutenção, remover ou add/estilos dinamicos/perfomance(elimina a utilização de sass?)/injecao automaticas de prefixos vendor
+
+stateful e stateless
+stateful - componente possui estados e gerenciamento, normalmente criado com classes.
+seu ciclo de vida possui varios estados para controle (inicialização/mounting/updating/unmont)
+A atualização dos estados e dada destruindo o estado anterior e montando um novo estado
+stateless - nao usa estados e nao possui gerenciamento de estado, usa funções em javascript
+
+formularios 
+mantem um estado interno proprio
+componente controlado - select, input ou textarea aceitam atributo value, mudando o valor com 'onChange'
+componente nao controlado - tag input é 'ready only'
+bibliotecas de formularios - 'formik' e 'redux-forms'
+
+
+Redux e fluxos de arquitetura (redux é o mais usado)
+facebook cria o flux para solucionar o problema, que nada mais é que deixar o padrao em um unico fluxos
+-Action - formata a mensagem a ser enviada
+-Dispatcher - como telefonista, sabe os callbacks para diferentes stores
+-Store - guarda as informações e estados e ela tambem que altera os estados
+-View - middleware ele que faz as modificações no virtual DOM
+essas bibliotecas servem para comunicação entre componentes, centralizam informação "flux libraries are like glasses: you will know when you need them"
+
+redux
+dan abromov e andrew clark 2015
+single source of truth - unica store
+state é read-only
+mudanças feitas com pure function, estado imutavel
+-Action - como do flux, nao enviam a action, retornam apenas um objeto formatado
+- Store - redux tem uma unica store, que cuida de toda a arvore de estados e o reducer define qual estado muda (no redux nao ha dispatcher, simplifica o trabalho da store)
+store se conecta ao root reducer, que separa os estados, estados imutaveis
+3 novos conceitos a view store
+provider - wrapper da arvore, facilita a conexao
+connect - função, high ordem component
+selector -  funçao escrita por nos mesmo,  define quais estados do redux a gente quer passar como props
+
+Comunicação avançada entre aplicações
+-Rest http com React, endo os principais conectores
+Get - listagem
+POST - criação
+Delete - deleta os dados
+PUT - altera os dados
+fetch API - nativa do brownser, suporta services workers, nao envia e nem recebe cokkies, nao rejeita o status do erro http
+AXIOS - lib http, muito usada para quem trabalha com react
+
+documentação mdn - using fetch api ("https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch")
+fetch - vem por padrao como uma resposta 'promisse'
+
+Axios - lib de http API, cross browser (monitora progresso da request, melhor tratamento de erros e melhor teste)
+deve ser instalado antes (documentação "https://axios-http.com/docs/intro")
+
+Imutabilidade e redux
+coleção nao podem ser alterada apos ser criada, novas podem ser criadas a partir de uma anterior e mais um setter, isso ajuda na perfomance (pros - performance (consegue otimizar a performance devido a maior controle do que sera renderizado, no caso uma alteração de estado) - principal/programa mais facil/debbuuging)
+dados imutaveis ajudam na performance(shouldComponentUpdate/React.PureComponent) - problemas (a comparaçao do PureComponent é rasa, pode ocorrer mudanças e ser considerado igual) - Immutable js - bibiblioteca de coleçoes persistentes e imutaveis, detecção barata de objetos
+Redux usa comparações rasas, tem manipulaçao de dados mais segura (reducer  )
+
+Redux e Rest
+middleware - camada entre o disparo e o momento que a açao atinge o reducer,varias funçoes como chamada de API de serviços
+applymiddleware x redux
+-so expoe um subconjunto da store Api para o middleware
+-fica dificil indentificar se o store.dispatch vai percorrer toda a acadeia do middleware de novo
+-opera em cima do createStore
+
+
+TDD e BDD
+TDD - Test-Driven development - desenvolvimento orientado a teste, que visa escrever um codigo para testar o proprio codigo, antecipando erros, escrito antes da funcionalidade, nao descarta um 'tester'
+red - primeiro escreva um teste que falha
+green - cria a função para trabalhar na aplicação
+refactor - refatorar e reescrever o codigo para funcionamento 
+teste unitario - teste de cada unidade, funções, componentes individuais, serviços, pag, etc (bibliotecas - jest - ja vem mbutida, react testing-library (testa hooks)/ shallow, mocha (fluxo e teste unitario))
+end-to-end - de ponta a ponta
+BDD - behavior driven development - complexo, une especificação, teste automatizado e premissa de teste (jest-cucumber)
+
+Debbuging - encontra e reduzir defeitos no software (chrome devtools)
+tratamentos de erros, software mais resiliente e mais seguro, deve se fazer um tratamento de erro
+forms é extremamente necessario, fazer um catch desses erros para evitar softwares maliciosos
+nas apis deve-se criar uma função para tratar o erro da busca pela api e tratar esse erro
